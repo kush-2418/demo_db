@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Know about Me
+
+{% endblock%}
+{% block content %}
+
+
+<div class='container'>
+
+    <h1>About Me...</h1>
+    <p>  {{names}} </p>
+      <p>  {{names.0}} </p>
+      
+      <p>
+      <ul>
+      {% for name in names %}
+      
+      {% if name == 'Pranav' %}
+    <li>  Pranav is a banker </li>
+            {% else %}      
+      
+     <li> {{name}} </li> <br/>
+     
+     {% endif %}
+        {% endfor %}
+        
+        </ul>
+        </p>
+</div>
+
+{% endblock %}

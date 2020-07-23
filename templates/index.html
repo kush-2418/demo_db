@@ -1,0 +1,22 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Welcome to Kush Shrivastava Blog
+{% endblock %}
+{% block content %}
+
+<div class='container'>
+
+    <h1>Kush Shrivastava</h1>
+    
+    <br/>
+    
+    <br/>
+    <!-- one way <img src="static/images/kargil.jpg" width="600" -->
+
+    <img src="{{ url_for('static', filename ='images/kargil.jpg' ) }}" width="400">
+    
+    </div>
+{% endblock %}

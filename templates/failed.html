@@ -1,0 +1,43 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+{% block content %}
+
+<div class='container'>
+
+    <h1>Error </h1>
+    <br/>
+    <br/>
+    
+   <h3> {{error_statement}} <h3>
+   <small> Please fill the information again </small>
+   
+   
+      <form action="/signup" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">First Name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name" name="first_name" value="{{ first_name }}">
+    
+  </div>
+
+
+  <div class="form-group">
+      <label for="exampleInputEmail1">Last Name</label>
+
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Last Name" name="last_name" value="{{ last_name }}">
+  </div>
+
+  <div class="form-group">
+     <label for="exampleInputEmail1">Email Address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" name="email" value="{{ email }} ">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+<br/>
+  <button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+    </div>
+{% endblock %}
